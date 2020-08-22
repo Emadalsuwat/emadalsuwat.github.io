@@ -1495,7 +1495,7 @@
   content: "\eab8";
 }
 .icon-google2:before {
-  content: "\eab9";
+  content: "\eab9";color: black;
 }
 .icon-google3:before {
   content: "\eaba";
@@ -1534,7 +1534,7 @@
   content: "\eac5";
 }
 .icon-twitter2:before {
-  content: "\eac6";
+  content: "\eac6";color: black;
 }
 .icon-vine:before {
   content: "\eac7";
@@ -1612,7 +1612,7 @@
   content: "\eadf";
 }
 .icon-github:before {
-  content: "\eae0";
+  content: "\eae0";color: black;
 }
 .icon-npm:before {
   content: "\eae1";
@@ -1687,7 +1687,7 @@
   content: "\eaf8";
 }
 .icon-linkedin2:before {
-  content: "\eaf9";
+  content: "\eaf9";color: black;
 }
 .icon-linkedin22:before {
   content: "\eafa";
