@@ -23,7 +23,6 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	<style>
-	/* ====== Custom Design ====== */
 	body {
 		background: linear-gradient(135deg,#f0f4f8,#dceefb,#e8f0fe);
 	}
@@ -70,6 +69,12 @@
 	.midterm { background: #e0ffe0 !important; font-weight: bold; }
 	.holiday { background: #ffe5e5 !important; font-weight: bold; color: #c0392b; }
 	.final { background: #f1f8ff !important; font-weight: bold; }
+	/* ضبط عرض الأعمدة */
+	th:nth-child(1) { width: 18%; }
+	th:nth-child(2) { width: 32%; }
+	th:nth-child(3) { width: 20%; }
+	th:nth-child(4) { width: 18%; }
+	th:nth-child(5) { width: 12%; }
 	</style>
 </head>
 <body>
@@ -78,7 +83,7 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" 
 		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 
-		<!-- ===== Left Menu (unchanged) ===== -->
+		<!-- ===== Left Menu ===== -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
@@ -116,72 +121,6 @@
 
 							<span class="heading-meta">(5018129-3) Theory of Computation</span>
 							<h2 class="colorlib-heading animate-box">Homepage and Syllabus</h2>
-
-							<div class="info-card">
-								<h4>Disclaimer</h4>
-								<p>This is the best information available as of <b>Thursday Sept 25, 2025</b> at 
-								<b>7:00 p.m. KSA time</b>. Updates will appear here as the course progresses.</p>
-							</div>
-
-							<h3 class="section-title">Meeting Time & Place</h3>
-							<ul>
-								<li><b>Section 911:</b> Thursday 4:00 p.m. – 7:00 p.m. (via Blackboard)</li>
-							</ul>
-
-							<h3 class="section-title">Instructor</h3>
-							<p>
-								Dr. Emad Alsuwat <br>
-								Course Homepage: 
-								<a href="https://emadalsuwat.github.io/TheoryofComputation-Fall2025.html" target="_blank">
-									TheoryofComputation-Fall2025.html
-								</a><br>
-								Office: W101 CIT<br>
-								Office hours: Thursday 8:00 a.m. – 4:00 p.m.<br>
-								Email: <a href="mailto:Alsuwat@tu.edu.sa">Alsuwat@tu.edu.sa</a>
-							</p>
-
-							<h3 class="section-title">Course Overview</h3>
-							<div class="info-card" style="background: linear-gradient(135deg,#74ebd5,#ACB6E5); color:#2c3e50;">
-								<p>Central to the theory of computation are the concepts of automata, formal languages, grammar, algorithms, computability, decidability, and complexity. 
-								These foundations provide not only theoretical understanding but also direct applications in compiler design, cryptography, optimization, and more.</p>
-							</div>
-
-							<h3 class="section-title">Learning Outcomes</h3>
-							<ul>
-								<li>Understand the mathematical foundations of computation (automata, grammars, complexity, decidability).</li>
-								<li>Develop ability to conduct rigorous mathematical proofs for algorithms and computation.</li>
-							</ul>
-
-							<h3 class="section-title">Textbooks</h3>
-							<ul>
-								<li><b>Required:</b> M. Sipser, <i>Introduction to the Theory of Computation</i>, 2nd Edition</li>
-								<li><b>Required:</b> Hopcroft, Motwani, Ullman, <i>Introduction to Automata Theory, Languages and Computation</i>, 3rd Edition</li>
-							</ul>
-
-							<h3 class="section-title">Grading Policy</h3>
-							<table class="table table-bordered">
-								<tr><td>Midterm Exam</td><td>25%</td></tr>
-								<tr><td>Homework Assignments</td><td>20%</td></tr>
-								<tr><td>Participation & Quizzes</td><td>10%</td></tr>
-								<tr><td>Final Exam</td><td>45%</td></tr>
-							</table>
-
-							<h3 class="section-title">Topics to be Covered</h3>
-							<table class="table table-striped table-hover">
-								<thead><tr><th>Week</th><th>Topic</th></tr></thead>
-								<tbody>
-									<tr><td>1</td><td>Overview</td></tr>
-									<tr><td>2</td><td>Formation of Preliminary Concepts</td></tr>
-									<tr><td>3</td><td>Regular Languages</td></tr>
-									<tr><td>4</td><td>Regular Languages (continued)</td></tr>
-									<tr><td>5</td><td>Context-Free Languages</td></tr>
-									<tr><td>6</td><td><b>Midterm Exam</b></td></tr>
-									<tr><td>7</td><td>The Church-Turing Thesis</td></tr>
-									<tr><td>8</td><td>Decidability</td></tr>
-									<tr><td>9</td><td>Reducibility</td></tr>
-									<tr><td>10</td><td>Advanced Topics in Computability</td></tr>
-								</tbody>
-							</table>
 
 							<h3 class="section-title">Lecture Notes & Homework</h3>
 							<p>Updates will appear week by week as the course progresses.</p>
