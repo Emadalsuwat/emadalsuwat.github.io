@@ -24,23 +24,26 @@
 
 	<style>
 	body {
-		background: linear-gradient(135deg,#f0f4f8,#e0eafc,#cfdef3);
+		background: linear-gradient(135deg,#e6f0fa,#f4f9ff);
+		font-family: 'Quicksand', sans-serif;
+		color: #2c3e50;
 	}
 	.info-card {
-		background: rgba(255,255,255,0.9);
+		background: rgba(255,255,255,0.95);
 		backdrop-filter: blur(10px);
-		color: #2c3e50;
 		padding: 20px;
 		border-radius: 14px;
-		box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+		box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 		margin-bottom: 25px;
+		transition: transform 0.3s ease;
 	}
+	.info-card:hover { transform: translateY(-4px); }
 	.section-title {
-		font-size: 26px;
+		font-size: 24px;
 		font-weight: 700;
 		margin: 25px 0 15px;
-		color: #2c3e50;
-		border-left: 6px solid #1abc9c;
+		color: #1a5276;
+		border-left: 6px solid #3498db;
 		padding-left: 12px;
 	}
 	/* ===== Table Design ===== */
@@ -48,23 +51,21 @@
 		width: 100%;
 		border-collapse: collapse;
 		margin: 20px 0;
-		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+		border-radius: 10px;
+		overflow: hidden;
 	}
 	.table thead tr {
-		background: linear-gradient(90deg,#34495e,#2c3e50);
+		background: linear-gradient(90deg,#2980b9,#2c3e50);
 		color: white;
-		text-align: center;
 	}
 	.table th, .table td {
-		padding: 12px;
+		padding: 12px 14px;
 		border: 1px solid #ddd;
 	}
-	.table tbody tr:nth-child(even) {
-		background: #f9f9f9;
-	}
-	.table tbody tr:hover {
-		background: #ecf0f1;
-	}
+	.table td { background: #ffffff; }
+	.table tbody tr:nth-child(even) { background: #f9fbfd; }
+	.table tbody tr:hover td { background: #ecf6ff; }
 	/* Column widths */
 	.table th:nth-child(1), .table td:nth-child(1) { width: 15%; text-align: center; }
 	.table th:nth-child(2), .table td:nth-child(2) { width: 35%; text-align: left; }
@@ -72,9 +73,15 @@
 	.table th:nth-child(4), .table td:nth-child(4) { width: 20%; text-align: center; }
 	.table th:nth-child(5), .table td:nth-child(5) { width: 15%; text-align: center; }
 	/* Special rows */
-	.midterm { background: #e8ffe8 !important; font-weight: bold; }
-	.holiday { background: #ffeaea !important; font-weight: bold; color: #c0392b; }
-	.final { background: #eef6ff !important; font-weight: bold; }
+	.midterm { background: #eafbea !important; font-weight: bold; color: #1e8449; }
+	.holiday { background: #fff0f0 !important; font-weight: bold; color: #c0392b; }
+	.final { background: #f0f8ff !important; font-weight: bold; color: #154360; }
+	a {
+		color: #2471a3;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+	a:hover { color: #117a65; text-decoration: underline; }
 	</style>
 </head>
 <body>
@@ -147,7 +154,7 @@
 							</p>
 
 							<h3 class="section-title">Course Overview</h3>
-							<div class="info-card" style="background: linear-gradient(135deg,#74ebd5,#ACB6E5); color:#2c3e50;">
+							<div class="info-card" style="background: linear-gradient(135deg,#d4fc79,#96e6a1); color:#2c3e50;">
 								<p>This course introduces fundamental concepts of programming and problem-solving techniques. 
 								Topics include data types, control structures, arrays, and the mechanics of running, testing, and debugging.</p>
 							</div>
@@ -174,7 +181,7 @@
 							</table>
 
 							<h3 class="section-title">Topics to be Covered</h3>
-							<table class="table table-hover">
+							<table class="table">
 								<thead><tr><th>Week</th><th>Topic</th></tr></thead>
 								<tbody>
 									<tr><td>1</td><td>Overview, components, identifiers</td></tr>
@@ -193,7 +200,7 @@
 							<h3 class="section-title">Lecture Notes & Homework</h3>
 							<p>Updates will appear week by week as the course progresses.</p>
 
-							<table class="table table-hover">
+							<table class="table">
 								<thead>
 									<tr>
 										<th>Week/Date</th>
