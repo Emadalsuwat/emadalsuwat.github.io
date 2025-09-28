@@ -23,61 +23,64 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	<style>
+	/* ===== خلفية راقية متدرجة ===== */
 	body {
-		background: linear-gradient(135deg,#e6f0fa,#f4f9ff);
+		background: linear-gradient(135deg,#e3f2fd,#f0f9ff,#d6f0f5);
 		font-family: 'Quicksand', sans-serif;
 		color: #2c3e50;
 	}
+	/* ===== كروت المعلومات ===== */
 	.info-card {
-		background: rgba(255,255,255,0.95);
-		backdrop-filter: blur(10px);
+		background: rgba(255,255,255,0.92);
+		backdrop-filter: blur(12px);
 		padding: 20px;
-		border-radius: 14px;
-		box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+		border-radius: 16px;
+		box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 		margin-bottom: 25px;
-		transition: transform 0.3s ease;
+		transition: all 0.3s ease;
 	}
 	.info-card:hover { transform: translateY(-4px); }
 	.section-title {
 		font-size: 24px;
 		font-weight: 700;
 		margin: 25px 0 15px;
-		color: #1a5276;
-		border-left: 6px solid #3498db;
+		color: #154360;
+		border-left: 6px solid #5dade2;
 		padding-left: 12px;
 	}
-	/* ===== Table Design ===== */
+	/* ===== تنسيق الجدول ===== */
 	.table {
 		width: 100%;
 		border-collapse: collapse;
 		margin: 20px 0;
-		box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-		border-radius: 10px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		border-radius: 12px;
 		overflow: hidden;
 	}
 	.table thead tr {
-		background: linear-gradient(90deg,#2980b9,#2c3e50);
+		background: linear-gradient(90deg,#2471a3,#154360);
 		color: white;
 	}
 	.table th, .table td {
-		padding: 12px 14px;
-		border: 1px solid #ddd;
+		padding: 12px 15px;
+		border: 1px solid #e1e8ed;
 	}
 	.table td { background: #ffffff; }
-	.table tbody tr:nth-child(even) { background: #f9fbfd; }
-	.table tbody tr:hover td { background: #ecf6ff; }
-	/* Column widths */
+	.table tbody tr:nth-child(even) { background: #f9fcff; }
+	.table tbody tr:hover td { background: #edf6ff; }
+	/* عرض الأعمدة */
 	.table th:nth-child(1), .table td:nth-child(1) { width: 15%; text-align: center; }
 	.table th:nth-child(2), .table td:nth-child(2) { width: 35%; text-align: left; }
 	.table th:nth-child(3), .table td:nth-child(3) { width: 15%; text-align: center; }
 	.table th:nth-child(4), .table td:nth-child(4) { width: 20%; text-align: center; }
 	.table th:nth-child(5), .table td:nth-child(5) { width: 15%; text-align: center; }
-	/* Special rows */
-	.midterm { background: #eafbea !important; font-weight: bold; color: #1e8449; }
-	.holiday { background: #fff0f0 !important; font-weight: bold; color: #c0392b; }
-	.final { background: #f0f8ff !important; font-weight: bold; color: #154360; }
+	/* صفوف خاصة */
+	.midterm { background: #e8f8f5 !important; font-weight: bold; color: #117a65; }
+	.holiday { background: #fdecea !important; font-weight: bold; color: #c0392b; }
+	.final { background: #ebf5fb !important; font-weight: bold; color: #1f618d; }
+	/* الروابط */
 	a {
-		color: #2471a3;
+		color: #1f77b4;
 		font-weight: 600;
 		transition: all 0.3s ease;
 	}
@@ -90,7 +93,7 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" 
 		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 
-		<!-- ===== Left Menu ===== -->
+		<!-- ===== القائمة اليسار ===== -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
@@ -119,7 +122,7 @@
 			</div>
 		</aside>
 
-		<!-- ===== Right Content ===== -->
+		<!-- ===== المحتوى ===== -->
 		<div id="colorlib-main">
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
@@ -154,7 +157,7 @@
 							</p>
 
 							<h3 class="section-title">Course Overview</h3>
-							<div class="info-card" style="background: linear-gradient(135deg,#d4fc79,#96e6a1); color:#2c3e50;">
+							<div class="info-card" style="background: linear-gradient(135deg,#a1c4fd,#c2e9fb); color:#2c3e50;">
 								<p>This course introduces fundamental concepts of programming and problem-solving techniques. 
 								Topics include data types, control structures, arrays, and the mechanics of running, testing, and debugging.</p>
 							</div>
@@ -246,7 +249,4 @@
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.countTo.js"></script>
-<script src="js/main.js"></script>
-
-</body>
-</html>
+<script src="js/main.js
