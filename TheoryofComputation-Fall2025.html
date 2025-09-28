@@ -5,97 +5,70 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Emad Alsuwat</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="shortcut icon" href="favicon.ico">
+
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/flexslider.css">
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script src="js/modernizr-2.6.2.min.js"></script>
-
 	<style>
-	/* ====== Custom Design ====== */
 	body {
-		background: linear-gradient(135deg,#f0f4f8,#e0eafc,#cfdef3);
-	}
-	.info-card {
-		background: rgba(255,255,255,0.8);
-		backdrop-filter: blur(10px);
-		color: #2c3e50;
-		padding: 20px;
-		border-radius: 14px;
-		box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-		margin-bottom: 25px;
-		transition: transform 0.3s ease;
-	}
-	.info-card:hover {
-		transform: translateY(-5px);
+	  background: linear-gradient(135deg, #d7e9f7, #a7cdee);
+	  font-family: 'Quicksand', sans-serif;
+	  color: #2c3e50;
 	}
 	.section-title {
-		font-size: 26px;
-		font-weight: 700;
-		margin: 25px 0 15px;
-		color: #2c3e50;
-		border-left: 6px solid #1abc9c;
-		padding-left: 12px;
+	  font-family: 'Playfair Display', serif;
+	  font-size: 28px;
+	  font-weight: 700;
+	  color: #2a5298;
+	  text-align:center;
+	  margin: 30px 0 15px;
+	  text-shadow: 0 0 3px rgba(255,255,255,0.6);
+	}
+	.info-card {
+	  background: rgba(255,255,255,0.95);
+	  border-radius: 15px;
+	  padding: 20px;
+	  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+	  margin-bottom:20px;
 	}
 	.table {
-		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-		border-radius: 10px;
-		overflow: hidden;
+	  width: 100%;
+	  border-collapse: collapse;
+	  margin-top: 20px;
+	  overflow: hidden;
+	  border-radius: 12px;
+	  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 	}
 	.table th {
-		background: linear-gradient(90deg,#34495e,#2c3e50);
-		color: white;
-		text-align: center;
+	  background: #2a5298;
+	  color: #fff;
+	  padding: 12px;
+	  text-align:center;
 	}
 	.table td {
-		background: rgba(255,255,255,0.9);
+	  background: #fff;
+	  padding: 10px;
+	  text-align: center;
+	  border: 1px solid #ddd;
 	}
 	.table-hover tbody tr:hover td {
-		background: #ecf0f1;
+	  background: #eef5ff;
+	  cursor: pointer;
 	}
-	a {
-		color: #2980b9;
-		font-weight: 600;
-		transition: all 0.3s ease;
-	}
-	a:hover {
-		color: #16a085;
-		text-decoration: underline;
-	}
-	/* Special rows */
-	.midterm {
-		background: #e0ffe0 !important;
-		font-weight: bold;
-	}
-	.holiday {
-		background: #ffe5e5 !important;
-		font-weight: bold;
-		color: #c0392b;
-	}
-	.final {
-		background: #f1f8ff !important;
-		font-weight: bold;
-	}
+	.midterm { background: #2a5298 !important; color:#fff; font-weight:bold; }
+	.holiday { background: #f39c12 !important; color:white; font-weight:bold; }
+	.final { background: #8e44ad !important; color:white; font-weight:bold; }
 	</style>
 </head>
 <body>
 <div id="colorlib-page">
 	<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" 
-		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 
-		<!-- ===== Left Menu (unchanged) ===== -->
+		<!-- القائمة اليسار (ما تغيرت) -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
@@ -113,146 +86,80 @@
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="colorlib-footer">
-				<p><small>&copy; Copyright by Emad Alsuwat, 2020; All rights reserved</small></p>
-				<ul>
-					<li><a href="https://emadalsuwat.github.io/"><i class="icon-github"></i></a></li>
-					<li><a href="https://twitter.com/ealsuwat"><i class="icon-twitter2"></i></a></li>
-					<li><a href="https://scholar.google.com/citations?user=3E5uZD8AAAAJ&hl=en"><i class="icon-google2"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/emad-alsuwat-6069b953"><i class="icon-linkedin2"></i></a></li>
-				</ul>
-			</div>
 		</aside>
 
-		<!-- ===== Right Content ===== -->
+		<!-- المحتوى اليمين -->
 		<div id="colorlib-main">
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+					<div class="about-desc info-card">
+						<span class="heading-meta">(5018129-3) Theory of Computation</span>
+						<h2 class="section-title">Homepage and Syllabus</h2>
 
-							<span class="heading-meta">(5018129-3) Theory of Computation</span>
-							<h2 class="colorlib-heading animate-box">Homepage and Syllabus</h2>
-
-							<div class="info-card">
-								<h4><i class="icon-info"></i> Disclaimer</h4>
-								<p>This is the best information available as of <b>Thursday Sept 25, 2025</b> at 
-								<b>7:00 p.m. KSA time</b>. Updates will appear here as the course progresses.</p>
-							</div>
-
-							<h3 class="section-title"><i class="icon-clock"></i> Meeting Time & Place</h3>
-							<ul>
-								<li><b>Section 911:</b> Thursday 4:00 p.m. – 7:00 p.m. (via Blackboard)</li>
-							</ul>
-
-							<h3 class="section-title"><i class="icon-user"></i> Instructor</h3>
-							<p>
-								Dr. Emad Alsuwat <br>
-								Course Homepage: 
-								<a href="https://emadalsuwat.github.io/TheoryofComputation-Fall2025.html" target="_blank">
-									TheoryofComputation-Fall2025.html
-								</a><br>
-								Office: W101 CIT<br>
-								Office hours: Thursday 8:00 a.m. – 4:00 p.m.<br>
-								Email: <a href="mailto:Alsuwat@tu.edu.sa">Alsuwat@tu.edu.sa</a>
-							</p>
-
-							<h3 class="section-title"><i class="icon-book"></i> Course Overview</h3>
-							<div class="info-card" style="background: linear-gradient(135deg,#74ebd5,#ACB6E5); color:#2c3e50;">
-								<p>Central to the theory of computation are the concepts of automata, formal languages, grammar, algorithms, computability, decidability, and complexity. 
-								These foundations provide not only theoretical understanding but also direct applications in compiler design, cryptography, optimization, and more.</p>
-							</div>
-
-							<h3 class="section-title"><i class="icon-target"></i> Learning Outcomes</h3>
-							<ul>
-								<li>Understand the mathematical foundations of computation (automata, grammars, complexity, decidability).</li>
-								<li>Develop ability to conduct rigorous mathematical proofs for algorithms and computation.</li>
-							</ul>
-
-							<h3 class="section-title"><i class="icon-library"></i> Textbooks</h3>
-							<ul>
-								<li><b>Required:</b> M. Sipser, <i>Introduction to the Theory of Computation</i>, 2nd Edition</li>
-								<li><b>Required:</b> Hopcroft, Motwani, Ullman, <i>Introduction to Automata Theory, Languages and Computation</i>, 3rd Edition</li>
-							</ul>
-
-							<h3 class="section-title"><i class="icon-pen"></i> Grading Policy</h3>
-							<table class="table table-bordered">
-								<tr><td>Midterm Exam</td><td>25%</td></tr>
-								<tr><td>Homework Assignments</td><td>20%</td></tr>
-								<tr><td>Participation & Quizzes</td><td>10%</td></tr>
-								<tr><td>Final Exam</td><td>45%</td></tr>
-							</table>
-
-							<h3 class="section-title"><i class="icon-list"></i> Topics to be Covered</h3>
-							<table class="table table-striped table-hover">
-								<thead>
-									<tr><th>Week</th><th>Topic</th></tr>
-								</thead>
-								<tbody>
-									<tr><td>1</td><td>Overview</td></tr>
-									<tr><td>2</td><td>Formation of Preliminary Concepts</td></tr>
-									<tr><td>3</td><td>Regular Languages</td></tr>
-									<tr><td>4</td><td>Regular Languages (continued)</td></tr>
-									<tr><td>5</td><td>Context-Free Languages</td></tr>
-									<tr><td>6</td><td><b>Midterm Exam</b></td></tr>
-									<tr><td>7</td><td>The Church-Turing Thesis</td></tr>
-									<tr><td>8</td><td>Decidability</td></tr>
-									<tr><td>9</td><td>Reducibility</td></tr>
-									<tr><td>10</td><td>Advanced Topics in Computability</td></tr>
-								</tbody>
-							</table>
-
-							<h3 class="section-title"><i class="icon-doc-text"></i> Lecture Notes & Homework</h3>
-							<p>Updates will appear week by week as the course progresses.</p>
-
-							<table class="table table-bordered table-striped table-hover">
-								<thead>
-									<tr>
-										<th>Week/Date</th>
-										<th>Topic</th>
-										<th>Slides</th>
-										<th>Assignment</th>
-										<th>Due Date</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td><b>Week 1<br>04/09/2025</b></td><td>General Orientation & Course Overview</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 2<br>11/09/2025</b></td><td>Lecture 1 — Introduction to Automata Theory</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 3<br>18/09/2025</b></td><td>Lecture 1 (continued)</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 4<br>25/09/2025</b></td><td>Lecture 2 — DFA: Definitions, Transition Functions</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 5<br>02/10/2025</b></td><td>Lecture 2 (continued) — NFA, DFA vs NFA</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 6<br>09/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 7<br>16/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 8<br>23/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr class="midterm"><td><b>Week 9<br>30/10/2025</b></td><td><b>Midterm Exam</b></td><td>-</td><td>-</td><td>-</td></tr>
-									<tr class="holiday"><td>-<br>06/11/2025</td><td><b>No Class (Holiday)</b></td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 10<br>13/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 11<br>20/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 12<br>27/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 13<br>04/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 14<br>11/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 15<br>18/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr class="final"><td><b>Weeks 16–17<br>From 25/12/2025</b></td><td><b>Final Exams</b></td><td>-</td><td>-</td><td>-</td></tr>
-								</tbody>
-							</table>
-
+						<div class="info-card">
+							<h4>Disclaimer</h4>
+							This is the best information available as of <b>Thursday Sept 25, 2025</b> at 
+							<b>7:00 p.m. KSA time</b>. Changes will appear here as the course progresses.
 						</div>
+
+						<h4 class="section-title">Meeting time and place</h4>
+						<ul>
+							<li><b>Section 911:</b> Thursday 4:00 p.m. - 7:00 p.m. (via Blackboard)</li>
+						</ul>
+
+						<h4 class="section-title">Instructor</h4>
+						<p>
+							Dr. Emad Alsuwat <br>
+							Email: <a href="mailto:Alsuwat@tu.edu.sa">Alsuwat@tu.edu.sa</a>
+						</p>
+
+						<h4 class="section-title">Grading Policy</h4>
+						<table class="table">
+							<tr><td>Midterm Exam</td><td>25%</td></tr>
+							<tr><td>Homework Assignments</td><td>20%</td></tr>
+							<tr><td>Participation & Quizzes</td><td>10%</td></tr>
+							<tr><td>Final Exam</td><td>45%</td></tr>
+						</table>
+
+						<h4 class="section-title">Lecture Notes and Homework</h4>
+						<p>Updates will appear week by week as the course progresses.</p>
+
+						<table class="table table-hover">
+						  <thead>
+						    <tr>
+						      <th>Week/Date</th>
+						      <th>Topic</th>
+						      <th>Slides</th>
+						      <th>Assignment</th>
+						      <th>Due Date</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr><td><b>Week 1<br>04/09/2025</b></td><td>General Orientation & Course Overview</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 2<br>11/09/2025</b></td><td>Lecture 1 — Introduction to Automata Theory</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 3<br>18/09/2025</b></td><td>Lecture 1 (continued) — Alphabets, Strings, Grammars, Proofs</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 4<br>25/09/2025</b></td><td>Lecture 2 — Finite Automata (DFA)</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 5<br>02/10/2025</b></td><td>Lecture 2 (continued) — NFA, Conversions</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 6<br>09/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 7<br>16/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 8<br>23/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr class="midterm"><td><b>Week 9<br>30/10/2025</b></td><td><b>Midterm Exam</b></td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr class="holiday"><td>-<br>06/11/2025</td><td><b>No Class (Holiday)</b></td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 10<br>13/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 11<br>20/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 12<br>27/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 13<br>04/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 14<br>11/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr><td><b>Week 15<br>18/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+						    <tr class="final"><td><b>Weeks 16–17<br>From 25/12/2025</b></td><td><b>Final Exams</b></td><td>-</td><td>-</td><td>-</td></tr>
+						  </tbody>
+						</table>
+
 					</div>
 				</div>
 			</section>
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-</div><!-- end:colorlib-page -->
-
-<!-- JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src="js/main.js"></script>
-
+		</div>
+	</div>
+</div>
 </body>
 </html>
