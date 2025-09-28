@@ -34,9 +34,7 @@
 		border-radius: 14px;
 		box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 		margin-bottom: 25px;
-		transition: transform 0.3s ease;
 	}
-	.info-card:hover { transform: translateY(-5px); }
 	.section-title {
 		font-size: 26px;
 		font-weight: 700;
@@ -45,45 +43,49 @@
 		border-left: 6px solid #1abc9c;
 		padding-left: 12px;
 	}
+	/* جدول مثالي */
 	.table {
-		box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-		border-radius: 10px;
+		box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+		border-radius: 12px;
 		overflow: hidden;
-	}
-	.table th {
-		background: linear-gradient(90deg,#34495e,#2c3e50);
-		color: white;
 		text-align: center;
 	}
-	.table td {
-		background: rgba(255,255,255,0.95);
-		vertical-align: middle;
+	.table th {
+		background: linear-gradient(90deg,#2c3e50,#34495e);
+		color: #fff;
+		font-weight: 600;
+		font-size: 15px;
+		text-align: center;
+		padding: 10px;
 	}
-	.table-hover tbody tr:hover td { background: #f5f9fc; }
+	.table td {
+		background: #ffffff;
+		vertical-align: middle;
+		padding: 9px;
+		font-size: 14px;
+	}
+	.table-hover tbody tr:hover td { background: #f5faff; }
+	/* تخصيص الأعمدة */
+	th:nth-child(1) { width: 18%; }
+	th:nth-child(2) { width: 32%; text-align: left; padding-left: 10px; }
+	th:nth-child(3) { width: 20%; }
+	th:nth-child(4) { width: 20%; }
+	th:nth-child(5) { width: 10%; }
+	/* تمييز الأسطر الخاصة */
+	.midterm { background: #e9fbe9 !important; font-weight: bold; }
+	.holiday { background: #ffecec !important; font-weight: bold; color: #c0392b; }
+	.final { background: #eef6ff !important; font-weight: bold; }
 	a {
 		color: #2980b9;
 		font-weight: 600;
 		transition: all 0.3s ease;
 	}
 	a:hover { color: #16a085; text-decoration: underline; }
-	.midterm { background: #e0ffe0 !important; font-weight: bold; }
-	.holiday { background: #ffe5e5 !important; font-weight: bold; color: #c0392b; }
-	.final { background: #f1f8ff !important; font-weight: bold; }
-	/* ضبط عرض الأعمدة */
-	th:nth-child(1) { width: 18%; }
-	th:nth-child(2) { width: 32%; }
-	th:nth-child(3) { width: 20%; }
-	th:nth-child(4) { width: 18%; }
-	th:nth-child(5) { width: 12%; }
 	</style>
 </head>
 <body>
 <div id="colorlib-page">
 	<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" 
-		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-
-		<!-- ===== Left Menu ===== -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
@@ -112,18 +114,14 @@
 			</div>
 		</aside>
 
-		<!-- ===== Right Content ===== -->
 		<div id="colorlib-main">
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 
-							<span class="heading-meta">(5018129-3) Theory of Computation</span>
-							<h2 class="colorlib-heading animate-box">Homepage and Syllabus</h2>
-
-							<h3 class="section-title">Lecture Notes & Homework</h3>
-							<p>Updates will appear week by week as the course progresses.</p>
+							<span class="heading-meta">(501220-3) Programming 1</span>
+							<h2 class="colorlib-heading animate-box">Lecture Notes & Homework</h2>
 
 							<table class="table table-bordered table-striped table-hover">
 								<thead>
@@ -136,22 +134,22 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr><td><b>Week 1<br>04/09/2025</b></td><td>General Orientation & Overview</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 2<br>11/09/2025</b></td><td>Lecture 1 — Intro to Automata Theory</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 3<br>18/09/2025</b></td><td>Lecture 1 (continued)</td><td><a href="Theory/Lecture1.pptx">Lecture 1</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 4<br>25/09/2025</b></td><td>Lecture 2 — DFA: Definitions, Transition Functions</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 5<br>02/10/2025</b></td><td>Lecture 2 (continued) — NFA, DFA vs NFA</td><td><a href="Theory/Lecture2.pptx">Lecture 2</a></td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 6<br>09/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 7<br>16/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 8<br>23/10/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr class="midterm"><td><b>Week 9<br>30/10/2025</b></td><td><b>Midterm Exam</b></td><td>-</td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 1<br>03/09/2025</b></td><td>Unit 1: Overview, components of a C++ program</td><td><a href="Programming1/Unit1.pptx">Unit 1</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 2<br>10/09/2025</b></td><td>Unit 1 (continued): Identifiers, constants, symbols</td><td><a href="Programming1/Unit1.pptx">Unit 1</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 3<br>17/09/2025</b></td><td>Unit 1 (wrap-up): Problem solving & program structure</td><td><a href="Programming1/Unit1.pptx">Unit 1</a></td><td>Homework 1</td><td>24/09/2025</td></tr>
+									<tr><td><b>Week 4<br>24/09/2025</b></td><td>Unit 2: Data types, variables, arithmetic operators</td><td><a href="Programming1/Unit2.pptx">Unit 2</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 5<br>01/10/2025</b></td><td>Unit 2 (continued): Expressions, precedence rules</td><td><a href="Programming1/Unit2.pptx">Unit 2</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 6<br>08/10/2025</b></td><td>Unit 2 (continued): Input & Output statements</td><td><a href="Programming1/Unit2.pptx">Unit 2</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 7<br>15/10/2025</b></td><td>Unit 2 (wrap-up): Practice with I/O and operators</td><td><a href="Programming1/Unit2.pptx">Unit 2</a></td><td>Homework 2</td><td>22/10/2025</td></tr>
+									<tr><td><b>Week 8<br>22/10/2025</b></td><td>Unit 3: Control Structures I (if, if-else) — Part 1</td><td><a href="Programming1/Unit3.ppt">Unit 3</a></td><td>-</td><td>-</td></tr>
+									<tr class="midterm"><td><b>Week 9<br>29/10/2025</b></td><td><b>Midterm Exam</b> (Units 1–2 + Unit 3 Part 1)</td><td>-</td><td>-</td><td>-</td></tr>
 									<tr class="holiday"><td><b>Week 10<br>06/11/2025</b></td><td><b>No Class (Holiday)</b></td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 11<br>13/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 12<br>20/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 13<br>27/11/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 14<br>04/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr><td><b>Week 15<br>11/12/2025</b></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-									<tr class="final"><td><b>Weeks 16–17<br>21/12/2025 – 06/01/2026</b></td><td><b>Final Exams</b></td><td>-</td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 11<br>13/11/2025</b></td><td>Unit 3: Control Structures I (switch, nested if) — Part 2</td><td><a href="Programming1/Unit3.ppt">Unit 3</a></td><td>Homework 3</td><td>20/11/2025</td></tr>
+									<tr><td><b>Week 12<br>20/11/2025</b></td><td>Unit 4: Loops (for, while)</td><td><a href="Programming1/Unit4.pptx">Unit 4</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 13<br>27/11/2025</b></td><td>Unit 4 (continued): do…while, applications</td><td><a href="Programming1/Unit4.pptx">Unit 4</a></td><td>Homework 4</td><td>04/12/2025</td></tr>
+									<tr><td><b>Week 14<br>04/12/2025</b></td><td>Unit 5: Arrays I (1D arrays, declaration & processing)</td><td><a href="Programming1/Unit5.ppt">Unit 5</a></td><td>-</td><td>-</td></tr>
+									<tr><td><b>Week 15<br>11/12/2025</b></td><td>Unit 5 (continued): 2D arrays, searching, parallel arrays</td><td><a href="Programming1/Unit5.ppt">Unit 5</a></td><td>Homework 5</td><td>18/12/2025</td></tr>
+									<tr class="final"><td><b>Weeks 16–17<br>21/12/2025 – 06/01/2026</b></td><td><b>Final Exams</b> (Comprehensive)</td><td>-</td><td>-</td><td>-</td></tr>
 								</tbody>
 							</table>
 
