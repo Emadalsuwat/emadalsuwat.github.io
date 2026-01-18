@@ -1,173 +1,387 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Data Structures | Emad Alsuwat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Emad Alsuwat | Data Structures (501324-3)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/flexslider.css">
-  <link rel="stylesheet" href="css/style.css">
+	<!-- CSS (same structure as your Programming 1 page) -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-  <script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/modernizr-2.6.2.min.js"></script>
 
-  <style>
-    body{
-      background: linear-gradient(135deg,#e3f2fd,#f0f9ff,#d6f0f5);
-      font-family:'Quicksand',sans-serif;
-      color:#2c3e50;
-    }
-    .info-card{
-      background: rgba(255,255,255,0.95);
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom: 22px;
-    }
-    .section-title{
-      font-size: 24px;
-      font-weight: 700;
-      margin: 26px 0 16px;
-      color: #154360;
-      border-left: 6px solid #5dade2;
-      padding-left: 12px;
-    }
-    table{
-      width:100%;
-      border-collapse: collapse;
-      margin: 20px 0 30px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    thead{
-      background: linear-gradient(90deg,#2471a3,#154360);
-      color: white;
-    }
-    th,td{
-      padding: 12px 15px;
-      border: 1px solid #e1e8ed;
-    }
-    tbody tr:nth-child(even){ background:#f9fcff; }
-    tbody tr:hover{ background:#edf6ff; }
-    .exam-row{ background:#e8f8f5 !important; font-weight:bold; }
-    .final-row{ background:#ebf5fb !important; font-weight:bold; }
-  </style>
+	<style>
+		/* ===== Elegant gradient background ===== */
+		body{
+			background: linear-gradient(135deg,#e3f2fd,#f0f9ff,#d6f0f5);
+			font-family:'Quicksand',sans-serif;
+			color:#2c3e50;
+		}
+
+		/* ===== Info cards ===== */
+		.info-card{
+			background: rgba(255,255,255,0.92);
+			backdrop-filter: blur(12px);
+			padding: 20px;
+			border-radius: 16px;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+			margin-bottom: 22px;
+			transition: all 0.3s ease;
+		}
+		.info-card:hover{ transform: translateY(-4px); }
+
+		.section-title{
+			font-size: 24px;
+			font-weight: 700;
+			margin: 25px 0 15px;
+			color: #154360;
+			border-left: 6px solid #5dade2;
+			padding-left: 12px;
+		}
+
+		/* ===== Tables ===== */
+		.table{
+			width: 100%;
+			border-collapse: collapse;
+			margin: 16px 0 26px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			border-radius: 12px;
+			overflow: hidden;
+		}
+		.table thead tr{
+			background: linear-gradient(90deg,#2471a3,#154360);
+			color: white;
+		}
+		.table th, .table td{
+			padding: 12px 15px;
+			border: 1px solid #e1e8ed;
+			vertical-align: top;
+		}
+		.table td{ background:#ffffff; }
+		.table tbody tr:nth-child(even) td{ background:#f9fcff; }
+		.table tbody tr:hover td{ background:#edf6ff; }
+
+		/* widths for 3-col weekly plan */
+		.weekly-plan th:nth-child(1), .weekly-plan td:nth-child(1){ width: 18%; text-align:center; }
+		.weekly-plan th:nth-child(2), .weekly-plan td:nth-child(2){ width: 62%; }
+		.weekly-plan th:nth-child(3), .weekly-plan td:nth-child(3){ width: 20%; text-align:center; }
+
+		/* Special rows */
+		.midterm{ background:#e8f8f5 !important; font-weight:bold; color:#117a65; }
+		.final{ background:#ebf5fb !important; font-weight:bold; color:#1f618d; }
+		.breakrow{ background:#fdecea !important; font-weight:bold; color:#c0392b; }
+
+		/* Links */
+		a{
+			color:#1f77b4;
+			font-weight:600;
+			transition: all 0.2s ease;
+		}
+		a:hover{ color:#117a65; text-decoration: underline; }
+
+		code{
+			background:#f3f7fb;
+			padding:2px 6px;
+			border-radius:6px;
+		}
+	</style>
 </head>
 
 <body>
 <div id="colorlib-page">
-  <div class="container-wrap">
-    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse"
-       data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+	<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse"
+		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 
-    <!-- ===== LEFT MENU (UNCHANGED) ===== -->
-    <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-      <div class="text-center">
-        <div class="author-img" style="background-image: url(images/about.jpg);"></div>
-        <h1 id="colorlib-logo"><a href="index.html">Emad Alsuwat, Ph.D.</a></h1>
-        <span class="position">Assistant Professor</span>
-      </div>
+		<!-- ===== LEFT MENU TOOLBAR (kept like Programming 1) ===== -->
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Emad Alsuwat, Ph.D.</a></h1>
+				<span class="position">Assistant Professor</span>
+			</div>
 
-      <nav id="colorlib-main-menu" role="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="cybersecuritylab.html">CyberSec Lab</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li class="colorlib-active"><a href="#">Data Structures</a></li>
-          <li><a href="bio.html">Bio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="cybersecuritylab.html">CyberSec Lab</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li class="colorlib-active"><a href="teaching.html">Teaching</a></li>
+					<li><a href="bio.html">Bio</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 
-      <div class="colorlib-footer">
-        <p><small>&copy; Emad Alsuwat</small></p>
-      </div>
-    </aside>
+			<div class="colorlib-footer">
+				<p><small>&copy; Copyright by Emad Alsuwat, 2020; All rights reserved</small></p>
+				<ul>
+					<li><a href="https://emadalsuwat.github.io/"><i class="icon-github"></i></a></li>
+					<li><a href="https://twitter.com/ealsuwat"><i class="icon-twitter2"></i></a></li>
+					<li><a href="https://scholar.google.com/citations?user=3E5uZD8AAAAJ&hl=en"><i class="icon-google2"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/emad-alsuwat-6069b953"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
+		</aside>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <div id="colorlib-main">
-      <section class="colorlib-about">
-        <div class="colorlib-narrow-content">
-          <h2 class="colorlib-heading">(501324-3) Data Structures</h2>
-          <span class="heading-meta">Spring 2026</span>
+		<!-- ===== MAIN CONTENT ===== -->
+		<div id="colorlib-main">
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 
-          <div class="info-card">
-            <b>Lectures:</b> Every <b>Sunday</b> starting <b>18 January 2026</b><br>
-            <b>Instructor:</b> Dr. Emad Alsuwat<br>
-            <b>Email:</b> Alsuwat@tu.edu.sa
-          </div>
+							<span class="heading-meta">(501324-3) Data Structures</span>
+							<h2 class="colorlib-heading animate-box">Homepage and Syllabus</h2>
 
-          <h3 class="section-title">Sections</h3>
-          <ul>
-            <li><b>Section 29202:</b> Sunday 08:00 – 11:00 (Room 282)</li>
-            <li><b>Section 29204:</b> Sunday 11:00 – 14:00 (Room 290)</li>
-          </ul>
+							<!-- ===== Disclaimer (kept like Programming 1) ===== -->
+							<div class="info-card">
+								<h4 style="margin-top:0;">Disclaimer</h4>
+								<p style="margin-bottom:0;">
+									This is the best information available as of <b>Sunday Jan 18, 2026</b>.
+									Updates will appear here as the course progresses.
+								</p>
+							</div>
 
-          <h3 class="section-title">Course Description</h3>
-          <div class="info-card">
-            This course introduces fundamental data structures and algorithm analysis using C++.
-            Topics include linked lists, stacks, queues, trees, hash tables, searching, sorting,
-            and algorithm efficiency.
-          </div>
+							<!-- ===== Meeting Time & Place ===== -->
+							<h3 class="section-title">Meeting Time & Place</h3>
+							<ul>
+								<li><b>Section 29202:</b> Sunday 8:00 a.m. – 11:00 a.m. (Room <b>282</b>)</li>
+								<li><b>Section 29204:</b> Sunday 11:00 a.m. – 2:00 p.m. (Room <b>290</b>)</li>
+							</ul>
 
-          <h3 class="section-title">Lecture Schedule & Slides</h3>
-          <p>
-            The schedule spans the full semester (~18 weeks). Some weeks are reserved for review,
-            exams, or buffer time. Slide links follow the naming convention:
-            <code>DataStructures/Lecture#.pptx</code>.
-          </p>
+							<!-- ===== Instructor ===== -->
+							<h3 class="section-title">Instructor</h3>
+							<p>
+								Dr. Emad Alsuwat <br>
+								Course Homepage:
+								<a href="https://emadalsuwat.github.io/datastructures-Spring2026.html" target="_blank" rel="noopener">
+									datastructures-Spring2026.html
+								</a><br>
+								Office: W101 CIT<br>
+								Office hours: Thursday 8:00 a.m. – 4:00 p.m.<br>
+								Email: <a href="mailto:Alsuwat@tu.edu.sa">Alsuwat@tu.edu.sa</a>
+							</p>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Week</th>
-                <th>Topic</th>
-                <th>Slides</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Week 1</td><td>Introduction to Data Structures & ADTs</td><td><a href="DataStructures/Lecture1.pptx">Lecture 1</a></td></tr>
-              <tr><td>Week 2</td><td>Linked Lists – Part 1</td><td><a href="DataStructures/Lecture2.pptx">Lecture 2</a></td></tr>
-              <tr><td>Week 3</td><td>Linked Lists – Part 2</td><td><a href="DataStructures/Lecture3.pptx">Lecture 3</a></td></tr>
-              <tr><td>Week 4</td><td>Stacks & Queues</td><td><a href="DataStructures/Lecture4.pptx">Lecture 4</a></td></tr>
-              <tr><td>Week 5</td><td>Trees (BST & Heap)</td><td><a href="DataStructures/Lecture5.pptx">Lecture 5</a></td></tr>
-              <tr><td>Week 6</td><td>Hash Tables</td><td><a href="DataStructures/Lecture6.pptx">Lecture 6</a></td></tr>
+							<!-- ===== Course Overview ===== -->
+							<h3 class="section-title">Course Overview</h3>
+							<div class="info-card" style="background: linear-gradient(135deg,#a1c4fd,#c2e9fb); color:#2c3e50;">
+								<p style="margin-bottom:0;">
+									This course introduces fundamental data structures and algorithm analysis using C++.
+									Students learn how to design, implement, and evaluate efficient data structures and
+									algorithms, including linked lists, stacks, queues, trees, hash tables, searching,
+									sorting, and graph basics.
+								</p>
+							</div>
 
-              <tr class="exam-row"><td>Week 7</td><td>Midterm Exam</td><td>—</td></tr>
+							<!-- ===== Learning Outcomes ===== -->
+							<h3 class="section-title">Learning Outcomes</h3>
+							<ul>
+								<li>Understand Abstract Data Types (ADTs) and select appropriate structures for problem solving</li>
+								<li>Implement and use linked lists, stacks, and queues</li>
+								<li>Implement and use trees and hash tables for efficient data organization</li>
+								<li>Analyze time and space complexity (Big-O) of algorithms and operations</li>
+								<li>Apply searching and sorting methods and compare their performance</li>
+							</ul>
 
-              <tr><td>Week 8</td><td>Algorithm Analysis (Big-O)</td><td><a href="DataStructures/Lecture7.pptx">Lecture 7</a></td></tr>
-              <tr><td>Week 9</td><td>Searching Algorithms</td><td><a href="DataStructures/Lecture8.pptx">Lecture 8</a></td></tr>
-              <tr><td>Week 10</td><td>Sorting Algorithms</td><td><a href="DataStructures/Lecture9.pptx">Lecture 9</a></td></tr>
+							<!-- ===== Textbook ===== -->
+							<h3 class="section-title">Textbook</h3>
+							<ul>
+								<li><b>Required:</b> Mark Allen Weiss, <i>Data Structures and Algorithm Analysis in C++</i> (2013)</li>
+								<li><b>Supportive:</b> N. Wirth, <i>Algorithms and Data Structures</i></li>
+							</ul>
 
-              <tr><td>Week 11</td><td>Graphs – Concepts & Representations</td><td>—</td></tr>
-              <tr><td>Week 12</td><td>Graphs – Traversals (BFS / DFS)</td><td>—</td></tr>
-              <tr><td>Week 13</td><td>Comprehensive Practice</td><td>—</td></tr>
-              <tr><td>Week 14</td><td>Revision & Problem Solving</td><td>—</td></tr>
+							<!-- ===== Grading Policy ===== -->
+							<h3 class="section-title">Grading Policy</h3>
+							<table class="table">
+								<tbody>
+									<tr><td>Homework / Quizzes / Exercises / Participation</td><td style="text-align:center;"><b>40%</b></td></tr>
+									<tr><td>Midterm Exam</td><td style="text-align:center;"><b>20%</b></td></tr>
+									<tr><td>Final Exam</td><td style="text-align:center;"><b>40%</b></td></tr>
+								</tbody>
+							</table>
 
-              <tr class="final-row"><td>Weeks 15–16</td><td>Final Exam</td><td>—</td></tr>
-            </tbody>
-          </table>
+							<!-- ===== Topics to be Covered ===== -->
+							<h3 class="section-title">Topics to be Covered</h3>
+							<table class="table">
+								<thead>
+									<tr>
+										<th style="width:16%; text-align:center;">#</th>
+										<th>Topic</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td style="text-align:center;">1</td><td>Introduction to Data Structures & ADTs</td></tr>
+									<tr><td style="text-align:center;">2</td><td>Linked Lists <b>(2 weeks)</b></td></tr>
+									<tr><td style="text-align:center;">3</td><td>Stacks and Queues</td></tr>
+									<tr><td style="text-align:center;">4</td><td>Trees (BST, Heap)</td></tr>
+									<tr><td style="text-align:center;">5</td><td>Hash Tables</td></tr>
+									<tr><td style="text-align:center;">6</td><td>Basics of Algorithm Analysis (Big-O)</td></tr>
+									<tr><td style="text-align:center;">7</td><td>Searching Algorithms</td></tr>
+									<tr><td style="text-align:center;">8</td><td>Sorting Algorithms</td></tr>
+									<tr><td style="text-align:center;">9</td><td>Graph Data Structures (Basics)</td></tr>
+								</tbody>
+							</table>
 
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
+							<!-- ===== Lecture Notes & Weekly Plan ===== -->
+							<h3 class="section-title">Lecture Notes</h3>
+							<div class="info-card">
+								<p style="margin-bottom:10px;">
+									Lectures are every <b>Sunday</b> starting <b>18/01/2026</b>.
+									Slide naming convention:
+									<code>DataStructures/Lecture1.pptx</code> … <code>DataStructures/Lecture9.pptx</code>.
+								</p>
+								<p style="margin-bottom:0;">
+									You asked for a full semester (~18 weeks). Therefore, the plan below includes:
+									core topics + practice/review/buffer weeks + exam weeks. (You will add HW/Quizzes later.)
+								</p>
+							</div>
 
-<!-- JS -->
+							<table class="table weekly-plan">
+								<thead>
+									<tr>
+										<th>Week / Date</th>
+										<th>Topic</th>
+										<th>Slides</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><b>Week 1<br>18/01/2026</b></td>
+										<td>Introduction to Data Structures & ADTs (course setup, C++ refresher as needed)</td>
+										<td><a href="DataStructures/Lecture1.pptx">Lecture 1</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 2<br>25/01/2026</b></td>
+										<td>Linked Lists (Part 1): nodes, pointers, traversal, insert/delete</td>
+										<td><a href="DataStructures/Lecture2.pptx">Lecture 2</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 3<br>01/02/2026</b></td>
+										<td>Linked Lists (Part 2): doubly/circular lists, applications, complexity</td>
+										<td><a href="DataStructures/Lecture3.pptx">Lecture 3</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 4<br>08/02/2026</b></td>
+										<td>Stacks & Queues: ADT, implementations, classic problems</td>
+										<td><a href="DataStructures/Lecture4.pptx">Lecture 4</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 5<br>15/02/2026</b></td>
+										<td>Trees: BST operations (insert/search/delete), traversals (concepts)</td>
+										<td><a href="DataStructures/Lecture5.pptx">Lecture 5</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 6<br>22/02/2026</b></td>
+										<td>Hash Tables: hashing, collisions (chaining / open addressing), performance</td>
+										<td><a href="DataStructures/Lecture6.pptx">Lecture 6</a></td>
+									</tr>
+
+									<tr class="midterm">
+										<td><b>Week 7<br>01/03/2026</b></td>
+										<td><b>Midterm Review & Practice</b> (problem solving session)</td>
+										<td>—</td>
+									</tr>
+									<tr class="midterm">
+										<td><b>Week 8<br>08/03/2026</b></td>
+										<td><b>Midterm Exam</b></td>
+										<td>—</td>
+									</tr>
+
+									<tr>
+										<td><b>Week 9<br>15/03/2026</b></td>
+										<td>Basics of Algorithm Analysis: Big-O, growth rates, time/space tradeoffs</td>
+										<td><a href="DataStructures/Lecture7.pptx">Lecture 7</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 10<br>22/03/2026</b></td>
+										<td>Searching Algorithms: linear search, binary search, complexity comparison</td>
+										<td><a href="DataStructures/Lecture8.pptx">Lecture 8</a></td>
+									</tr>
+									<tr>
+										<td><b>Week 11<br>29/03/2026</b></td>
+										<td>Sorting Algorithms: selection, insertion, merge, quick (overview + analysis)</td>
+										<td><a href="DataStructures/Lecture9.pptx">Lecture 9</a></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 12<br>05/04/2026</b></td>
+										<td>Graphs (Basics): representation (adjacency list/matrix), use cases</td>
+										<td>—</td>
+									</tr>
+									<tr>
+										<td><b>Week 13<br>12/04/2026</b></td>
+										<td>Graphs (Intro): BFS/DFS concepts + complexity (conceptual)</td>
+										<td>—</td>
+									</tr>
+
+									<tr>
+										<td><b>Week 14<br>19/04/2026</b></td>
+										<td>Advanced Practice 1: linked lists + stacks/queues mixed problems</td>
+										<td>—</td>
+									</tr>
+									<tr>
+										<td><b>Week 15<br>26/04/2026</b></td>
+										<td>Advanced Practice 2: trees + hashing mixed problems</td>
+										<td>—</td>
+									</tr>
+									<tr>
+										<td><b>Week 16<br>03/05/2026</b></td>
+										<td>Advanced Practice 3: searching/sorting + Big-O drills</td>
+										<td>—</td>
+									</tr>
+									<tr>
+										<td><b>Week 17<br>10/05/2026</b></td>
+										<td>Final Review: past questions, full course recap, exam strategies</td>
+										<td>—</td>
+									</tr>
+
+									<tr class="final">
+										<td><b>Week 18<br>17/05/2026</b></td>
+										<td><b>Final Exam</b> (University Schedule)</td>
+										<td>—</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- ===== Lecture Notes & Homework section (kept like Programming 1, but minimal) ===== -->
+							<h3 class="section-title">Lecture Notes & Homework</h3>
+							<div class="info-card">
+								<p style="margin-bottom:0;">
+									You asked to <b>remove HW/Quiz details for now</b>. This section is intentionally kept as a placeholder
+									so you can add weekly homework, quizzes, labs, and due dates later without changing the page structure.
+								</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+</div><!-- end:colorlib-page -->
+
+<!-- JS (same pattern as your original) -->
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.countTo.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
