@@ -1,0 +1,563 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Emad Alsuwat | Cryptography (501513-3)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<style>
+		body{
+			background: linear-gradient(135deg,#e3f2fd,#f0f9ff,#d6f0f5);
+			font-family:'Quicksand',sans-serif;
+			color:#2c3e50;
+		}
+		.info-card{
+			background: rgba(255,255,255,0.92);
+			backdrop-filter: blur(12px);
+			padding: 20px;
+			border-radius: 16px;
+			box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+			margin-bottom: 22px;
+		}
+		.section-title{
+			font-size: 24px;
+			font-weight: 700;
+			margin: 25px 0 15px;
+			color: #154360;
+			border-left: 6px solid #5dade2;
+			padding-left: 12px;
+		}
+		.table{
+			width: 100%;
+			border-collapse: collapse;
+			margin: 16px 0 26px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			border-radius: 12px;
+			overflow: hidden;
+		}
+		.table thead tr{
+			background: linear-gradient(90deg,#2471a3,#154360);
+			color: white;
+		}
+		.table th, .table td{
+			padding: 12px 15px;
+			border: 1px solid #e1e8ed;
+			vertical-align: top;
+		}
+		.table tbody tr:nth-child(even) td{ background:#f9fcff; }
+		.table tbody tr:hover td{ background:#edf6ff; }
+
+		/* 5-column plan widths */
+		.weekly-plan th:nth-child(1), .weekly-plan td:nth-child(1){ width: 16%; text-align:center; }
+		.weekly-plan th:nth-child(2), .weekly-plan td:nth-child(2){ width: 36%; }
+		.weekly-plan th:nth-child(3), .weekly-plan td:nth-child(3){ width: 18%; text-align:center; }
+		.weekly-plan th:nth-child(4), .weekly-plan td:nth-child(4){ width: 15%; text-align:center; }
+		.weekly-plan th:nth-child(5), .weekly-plan td:nth-child(5){ width: 15%; text-align:center; }
+
+		.midterm{ background:#e8f8f5 !important; font-weight:bold; }
+		.final{ background:#ebf5fb !important; font-weight:bold; }
+
+		a{ font-weight:600; }
+	</style>
+</head>
+
+<body>
+<div id="colorlib-page">
+	<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse"
+		   data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+		<!-- ===== LEFT MENU (kept) ===== -->
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Emad Alsuwat, Ph.D.</a></h1>
+				<span class="position">Assistant Professor</span>
+			</div>
+
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li><a href="index.html" data-nav-section="Home">Home</a></li>
+					<li><a href="research.html" data-nav-section="Research">Research</a></li>
+					<li><a href="cybersecuritylab.html" data-nav-section="Cybersecurity Lab">CyberSec Lab</a></li>
+					<li><a href="publications.html" data-nav-section="Publications">Publications</a></li>
+					<li class="colorlib-active"><a href="teaching.html" data-nav-section="Teaching">Teaching</a></li>
+					<li><a href="bio.html" data-nav-section="Bio">Bio</a></li>
+					<li><a href="contact.html" data-nav-section="Contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<p><small>&copy; Copyright by Emad Alsuwat, 2020; All rights reserved</small></p>
+				<ul>
+					<li><a href="https://emadalsuwat.github.io/"><i class="icon-github"></i></a></li>
+					<li><a href="https://twitter.com/ealsuwat"><i class="icon-twitter2"></i></a></li>
+					<li><a href="https://scholar.google.com/citations?user=3E5uZD8AAAAJ&hl=en"><i class="icon-google2"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/emad-alsuwat-6069b953"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
+		</aside>
+
+		<!-- ===== MAIN CONTENT ===== -->
+		<div id="colorlib-main">
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+
+							<span class="heading-meta">(501513-3) Cryptography</span>
+							<h2 class="colorlib-heading animate-box">Homepage and Syllabus</h2>
+
+							<!-- ===== Disclaimer ===== -->
+							<div class="info-card">
+								<h4 style="margin-top:0;">Disclaimer</h4>
+								<p style="margin-bottom:0;">
+									This is the best information available as of <b>Sunday Jan 18, 2026</b>.
+									Updates will appear here as the course progresses.
+								</p>
+							</div>
+
+							<!-- ===== Meeting Time & Place ===== -->
+							<h3 class="section-title">Meeting Time & Place</h3>
+							<ul>
+								<li><b>Section 596:</b> Wednesday (Room <b>24221</b>)</li>
+							</ul>
+
+							<!-- ===== Instructor ===== -->
+							<h3 class="section-title">Instructor</h3>
+							<p>
+								Dr. Emad Alsuwat <br>
+								Course Homepage:
+								<a href="https://emadalsuwat.github.io/cryptography.html" target="_blank" rel="noopener">
+									cryptography.html
+								</a><br>
+								Office: W101 CIT<br>
+								Office hours: Please email me if you have any question. If necessary, I will arrange a phone call or a virtual meeting.<br>
+								Email: <a href="mailto:Alsuwat@tu.edu.sa">Alsuwat@tu.edu.sa</a>
+							</p>
+
+							<!-- ===== Course Overview ===== -->
+							<h3 class="section-title">Course Overview</h3>
+							<div class="info-card" style="background: linear-gradient(135deg,#a1c4fd,#c2e9fb); color:#2c3e50;">
+								<p style="margin-bottom:0;">
+									This course provides students with an understanding of the fundamental concepts of cryptography and cryptanalysis.
+									Starting with classical algorithms (and their cryptanalysis), the focus moves to modern cryptographic algorithms,
+									primitives, and infrastructure. The course also introduces mathematical and probabilistic concepts used in cryptographic systems.
+								</p>
+							</div>
+
+							<!-- ===== Learning Outcomes ===== -->
+							<h3 class="section-title">Learning Outcomes</h3>
+							<ul>
+								<li>Describe the classic encryption schemes and their cryptanalysis</li>
+								<li>Apply mathematics and probability theory to the design and analysis of modern cryptographic algorithms</li>
+								<li>Describe symmetric-key and public-key encryption and related infrastructure</li>
+								<li>Describe cryptographic primitives such as key exchange, primality testing, and zero-knowledge proofs</li>
+							</ul>
+
+							<!-- ===== Textbook ===== -->
+							<h3 class="section-title">Textbook</h3>
+							<ul>
+								<li><b>Required:</b> William Stallings, <i>Cryptography and Network Security: Principles and Practice</i>, 5th Edition, 2010</li>
+							</ul>
+
+							<!-- ===== Grading Policy ===== -->
+							<h3 class="section-title">Grading Policy</h3>
+							<table class="table">
+								<tbody>
+									<tr><td>Midterm Exam</td><td style="text-align:center;"><b>25%</b></td></tr>
+									<tr><td>Homework Assignments</td><td style="text-align:center;"><b>20%</b></td></tr>
+									<tr><td>Participation and Quizzes</td><td style="text-align:center;"><b>10%</b></td></tr>
+									<tr><td>Final Exam</td><td style="text-align:center;"><b>45%</b></td></tr>
+								</tbody>
+							</table>
+
+							<!-- ===== Topics to be Covered ===== -->
+							<h3 class="section-title">Topics to be Covered</h3>
+							<p>
+								Below are roughly the sections of the William Stallings book that will be covered. Some topics may be de-emphasized and others may be added.
+							</p>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Topic</th>
+										<th style="width:22%; text-align:center;">Text Reference</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<b>Overview</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Computer Security Concepts</li>
+												<li>Security Attacks</li>
+												<li>Security Services</li>
+												<li>Security Mechanisms</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 1</td>
+									</tr>
+
+									<tr>
+										<td><b>PART ONE: SYMMETRIC CIPHERS</b></td>
+										<td style="text-align:center;">—</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Classical Encryption Techniques</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Symmetric Cipher Model</li>
+												<li>Substitution Techniques</li>
+												<li>Transposition Techniques</li>
+												<li>Rotor Machines</li>
+												<li>Steganography</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 2</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Block Ciphers and the Data Encryption Standard</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Block Cipher Principles</li>
+												<li>The Data Encryption Standard (DES)</li>
+												<li>A DES Example</li>
+												<li>The Strength of DES</li>
+												<li>Block Cipher Design Principles</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 3</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Basic Concepts in Number Theory and Finite Fields</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Divisibility and the Division Algorithm</li>
+												<li>The Euclidean Algorithm</li>
+												<li>Modular Arithmetic</li>
+												<li>Groups, Rings, and Fields</li>
+												<li>Finite Fields of the Form GF(p)</li>
+												<li>Polynomial Arithmetic</li>
+												<li>Finite Fields of the Form GF(2^n)</li>
+												<li>The Meaning of mod</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 4<br>Appendix 4A</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Advanced Encryption Standard</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>The Origins AES</li>
+												<li>AES Structure</li>
+												<li>AES Round Functions</li>
+												<li>AES Key Expansion</li>
+												<li>An AES Example</li>
+												<li>AES Implementation</li>
+												<li>Polynomials with Coefficients in GF(2^8)</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 5<br>Appendix 5A</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Block Cipher Operation</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Multiple Encryption and Triple DES</li>
+												<li>Electronic Codebook Mode</li>
+												<li>Cipher Block Chaining Mode</li>
+												<li>Cipher Feedback Mode</li>
+												<li>Output Feedback Mode</li>
+												<li>Counter Mode</li>
+												<li>XTS Mode for Block-Oriented Storage Devices</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 6</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Pseudorandom Number Generation and Stream Ciphers</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Principles of Pseudorandom Number Generation</li>
+												<li>Pseudorandom Number Generators</li>
+												<li>Pseudorandom Number Generation Using a Block Cipher</li>
+												<li>Stream Ciphers</li>
+												<li>RC4</li>
+												<li>True Random Numbers</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 7</td>
+									</tr>
+
+									<tr>
+										<td><b>PART TWO: ASYMMETRIC CIPHERS</b></td>
+										<td style="text-align:center;">—</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>More Number Theory</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Prime Numbers</li>
+												<li>Fermat’s and Euler’s Theorems</li>
+												<li>Testing for Primality</li>
+												<li>The Chinese Remainder Theorem</li>
+												<li>Discrete Logarithms</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 8</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Public-Key Cryptography and RSA</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Principles of Public-Key Cryptosystems</li>
+												<li>The RSA Algorithm</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 9</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Other Public-Key Cryptosystems</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Diffie-Hellman Key Exchange</li>
+												<li>ElGamal Cryptosystem</li>
+												<li>Elliptic Curve Arithmetic</li>
+												<li>Elliptic Curve Cryptography</li>
+												<li>Pseudorandom Number Generation Based on an Asymmetric Cipher</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 10</td>
+									</tr>
+
+									<tr>
+										<td><b>PART THREE: DATA INTEGRITY</b></td>
+										<td style="text-align:center;">—</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Cryptographic Hash Functions</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Applications of Cryptographic Hash Functions</li>
+												<li>Two Simple Hash Functions</li>
+												<li>Requirements and Security</li>
+												<li>Hash Functions Based on Cipher Block Chaining</li>
+												<li>Secure Hash Algorithm (SHA)</li>
+												<li>SHA-3</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 11</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Message Authentication Codes</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Message Authentication Requirements</li>
+												<li>Message Authentication Functions</li>
+												<li>Message Authentication Codes</li>
+												<li>Security of MACs</li>
+												<li>HMAC</li>
+												<li>DAA and CMAC</li>
+												<li>Authenticated Encryption: CCM and GCM</li>
+												<li>Pseudorandom Number Generation Using Hash Functions and MACs</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 12</td>
+									</tr>
+
+									<tr>
+										<td>
+											<b>Digital Signatures</b>
+											<ul style="margin:8px 0 0 18px;">
+												<li>Digital Signatures</li>
+												<li>ElGamal Digital Signature Scheme</li>
+												<li>Schnorr Digital Signature Scheme</li>
+												<li>Digital Signature Standard (DSS)</li>
+											</ul>
+										</td>
+										<td style="text-align:center;">Chapter 13</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- ===== Lecture Notes & Homework (DATES FIXED: every Wednesday starting this week) ===== -->
+							<h3 class="section-title">Lecture Notes & Homework</h3>
+							<p>Dates below are for the weekly class on <b>Wednesday</b>, starting this week.</p>
+
+							<table class="table weekly-plan">
+								<thead>
+									<tr>
+										<th>Week / Date</th>
+										<th>Topic</th>
+										<th>Slides</th>
+										<th>Assignment</th>
+										<th>Due Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><b>Week 1<br>21/01/2026</b></td>
+										<td>Syllabus Week</td>
+										<td>—</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 2<br>28/01/2026</b></td>
+										<td>Introduction</td>
+										<td><a href="cryptography/Fall2021slides/ch01.ppt" target="_blank" rel="noopener">Chapter 1</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 3<br>04/02/2026</b></td>
+										<td>Classical Encryption Techniques</td>
+										<td><a href="cryptography/Fall2021slides/ch02.ppt" target="_blank" rel="noopener">Chapter 2</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 4<br>11/02/2026</b></td>
+										<td>Block Ciphers and the Data Encryption Standard</td>
+										<td><a href="cryptography/Fall2021slides/ch03.ppt" target="_blank" rel="noopener">Chapter 3</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 5<br>18/02/2026</b></td>
+										<td>Basic Concepts in Number Theory and Finite Fields</td>
+										<td><a href="cryptography/Fall2021slides/ch04.ppt" target="_blank" rel="noopener">Chapter 4</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 6<br>25/02/2026</b></td>
+										<td>Advanced Encryption Standard</td>
+										<td><a href="cryptography/Fall2021slides/ch05.ppt" target="_blank" rel="noopener">Chapter 5</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 7<br>04/03/2026</b></td>
+										<td>Block Cipher Operation</td>
+										<td><a href="cryptography/Fall2021slides/ch06.ppt" target="_blank" rel="noopener">Chapter 6</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 8<br>11/03/2026</b></td>
+										<td>Stream Ciphers and Random Number Generation + Introduction to Number Theory</td>
+										<td>
+											<a href="cryptography/Fall2021slides/ch07.ppt" target="_blank" rel="noopener">Chapter 7</a><br>
+											<a href="cryptography/Fall2021slides/ch08.ppt" target="_blank" rel="noopener">Chapter 8</a>
+										</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr class="midterm">
+										<td><b>Week 9<br>18/03/2026</b></td>
+										<td>Midterm Exam (Ch. 1–7)</td>
+										<td>—</td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 10<br>25/03/2026</b></td>
+										<td>Public Key Cryptography and RSA</td>
+										<td><a href="cryptography/Fall2021slides/ch09.ppt" target="_blank" rel="noopener">Chapter 9</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 11<br>01/04/2026</b></td>
+										<td>Other Public Key Cryptosystems</td>
+										<td><a href="cryptography/Fall2021slides/ch10.ppt" target="_blank" rel="noopener">Chapter 10</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 12<br>08/04/2026</b></td>
+										<td>Cryptographic Hash Functions</td>
+										<td><a href="cryptography/Fall2021slides/ch11.ppt" target="_blank" rel="noopener">Chapter 11</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 13<br>15/04/2026</b></td>
+										<td>Message Authentication Codes</td>
+										<td><a href="cryptography/Fall2021slides/ch12.ppt" target="_blank" rel="noopener">Chapter 12</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td><b>Week 14<br>22/04/2026</b></td>
+										<td>Digital Signatures</td>
+										<td><a href="cryptography/Fall2021slides/ch13.ppt" target="_blank" rel="noopener">Chapter 13</a></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+</div><!-- end:colorlib-page -->
+
+<!-- JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
